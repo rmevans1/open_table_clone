@@ -1,7 +1,15 @@
 import {Inter} from 'next/font/google'
-import NavBar from "@/components/NavBar";
 import Header from "@/components/Header";
 import RestaurantCard from "@/components/RestaurantCard";
+import {PrismaClient} from "@prisma/client";
+
+const prisma = new PrismaClient();
+
+const fetchRestaurants = async () => {
+    const restaurants = await prisma.restaurant.findMany();
+
+    return restaurants
+}
 
 
 export const metadata = {
@@ -11,7 +19,10 @@ export const metadata = {
 
 const inter = Inter({subsets: ['latin']})
 
-export default function Home() {
+export default async function Home() {
+    const restaurants = await fetchRestaurants();
+
+    console.log({restaurants})
   return (
       <>
         <main>
