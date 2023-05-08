@@ -1,6 +1,6 @@
 import Header from "@/app/restaurant/components/Header";
 
-export default function Layout({children,}: {children: React.ReactNode}) {
+export default function RestaurantLayout({children,}: {children: React.ReactNode}) {
     return (
         <>
             <Header/>
