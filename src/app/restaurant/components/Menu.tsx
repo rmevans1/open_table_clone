@@ -1,7 +1,7 @@
 import MenuCard from "@/app/restaurant/components/MenuCard";
 import {Item} from "@prisma/client";
 
-export default function Menu({menu}: {menu: Item[]}) {
+export default function Menu({menu}: { menu: Item[] }) {
     return (
         <main className="bg-white mt-5">
             <div>
@@ -10,7 +10,7 @@ export default function Menu({menu}: {menu: Item[]}) {
                 </div>
                 <div className="flex flex-wrap justify-between">
                     {menu.map(item => (
-                        <MenuCard key={item.id} item={item} />
+                        <MenuCard key={item.id} item={item}/>
                     ))}
                 </div>
             </div>
