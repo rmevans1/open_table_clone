@@ -1,27 +1,7 @@
-import {PrismaClient} from "@prisma/client";
+import {Cuisine, Location} from "@prisma/client";
 
-const prisma = new PrismaClient();
 
-const fetchCities = async () => {
-    return prisma.location.findMany({
-        select: {
-            id: true,
-            name: true,
-        }
-    });
-}
-
-const fetchCuisines = async () => {
-    return prisma.cuisine.findMany({
-        select: {
-            id: true,
-            name: true,
-        }
-    });
-}
-export default function SideBar() {
-    const cities = fetchCities();
-    const cuisines =  fetchCuisines();
+export default function SideBar({cities, cuisines}: {cities: Location[], cuisines: Cuisine[]}) {
     return (
         <div className="w-1/5">
             <div className="border-b pb-4">
