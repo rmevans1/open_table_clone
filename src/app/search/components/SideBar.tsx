@@ -37,7 +37,7 @@ export default function SideBar({cities, cuisines, searchParams}: {cities: Locat
                 <h1 className="mb-2">Price</h1>
                 <div className="flex">
                     {prices.map((price =>(
-                        <Link href={{pathname:"/search", query: {...searchParams, price: price.price}}} className={`border w-full text-reg font-light ${price.class} p-2`}>
+                        <Link href={{pathname:"/search", query: {...searchParams, price: price.price}}} className={`border w-full text-center text-reg font-light ${price.class} p-2`}>
                             {price.label}
                         </Link>
                     )))}
