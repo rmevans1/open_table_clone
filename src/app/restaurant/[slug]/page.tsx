@@ -52,7 +52,7 @@ export default async function RestaurantDetails({params}: {params: {slug: string
                 <RestaurantNav slug={restaurant.slug}/>
                 <Title name={restaurant.name}/>
                 <Rating/>
-                <Description/>
+                <Description description={restaurant.description}/>
                 <Images/>
                 <Reviews/>
             </div>
