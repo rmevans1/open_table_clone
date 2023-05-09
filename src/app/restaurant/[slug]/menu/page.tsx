@@ -33,7 +33,7 @@ export default async function RestaurantMenu({params}: {params: {slug: string}})
         <>
             <div className="bg-white w-[100%] rounded p-3 shadow">
                 <RestaurantNav slug={params.slug}/>
-                <Menu items={menu}/>
+                <Menu menu={menu}/>
             </div>
         </>
     )
