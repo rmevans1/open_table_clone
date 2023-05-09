@@ -49,7 +49,7 @@ export default async function RestaurantDetails({params}: {params: {slug: string
     return (
         <>
             <div className="bg-white w-[70%] rounded p-3 shadow">
-                <RestaurantNav/>
+                <RestaurantNav slug={restaurant.slug}/>
                 <Title/>
                 <Rating/>
                 <Description/>
