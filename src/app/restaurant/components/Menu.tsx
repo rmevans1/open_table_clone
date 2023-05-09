@@ -1,6 +1,7 @@
 import MenuCard from "@/app/restaurant/components/MenuCard";
+import {Item} from "@prisma/client";
 
-export default function Menu() {
+export default function Menu({items}: {items: Item[]}) {
     return (
         <main className="bg-white mt-5">
             <div>
