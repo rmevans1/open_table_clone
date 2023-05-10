@@ -71,6 +71,8 @@ model User {
 
 model Review {
   id            Int        @id @default(autoincrement())
+  first_name    String
+  last_name     String
   text          String
   rating        Float
   restaurant_id Int
